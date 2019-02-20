@@ -18,14 +18,13 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-steps:
+
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)/DBDrop'
   inputs:
     SourceFolder: '$(build.sourcesdirectory)'
     TargetFolder: '$(Build.ArtifactStagingDirectory)/DBDrop' 
 
-steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: DBdrop'
   inputs:
