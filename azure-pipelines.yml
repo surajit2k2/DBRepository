@@ -21,6 +21,6 @@ steps:
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)/DBDrop'
   inputs:
-    SourceFolder: DBRepository
+    SourceFolder: '$(build.sourcesdirectory)'
     TargetFolder: '$(Build.ArtifactStagingDirectory)/DBDrop' 
 
